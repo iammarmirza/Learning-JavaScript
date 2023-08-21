@@ -18,5 +18,3 @@ console.log(course.courseInstructor)
 
  /* Note :- It is just a syntactical sugar,it is totally upto you to use it or not. You can use (course.courseInstructor) 
   like that without any issues. */
-
-  
