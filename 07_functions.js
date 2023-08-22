@@ -18,3 +18,22 @@ function bigSample(){
     smallSample();
 }
 bigSample();
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// If you are writing a function like this then you can use it in the lines before it is written 
+
+console.log(addTwoNumbers(3,5))
+
+function addTwoNumbers(num1, num2){
+    return num1 + num2
+}
+
+addTwoNumbers();
+
+// But if you are writing a function and storing it in a variable you will have to use it in the lines below the function is written
+
+const result = function addThreeNumbers(num1, num2, num3){
+    return num1 + num2 + num3;
+}
+console.log(result(1, 8, 9));
+
