@@ -5,7 +5,7 @@ if(condition){
 }
 // if condition inside paranthesis will be true the the code will execute
 // If there are only two conditions then you can also use else
-else(condition){
+else{
 
 }
 // Only one of them will execute
