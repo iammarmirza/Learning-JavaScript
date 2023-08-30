@@ -1,4 +1,3 @@
-// node 16_Loops/3_higher_order_array_loops.js
 // For of
 // These loops are array specific loops.
 // ["","",""]
