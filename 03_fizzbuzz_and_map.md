@@ -1,10 +1,16 @@
-/* let arr = ["hi","my","name","is","Ammar"]
+# Reduce Problem
+``` javascript
+let arr = ["hi","my","name","is","Ammar"]
 function joinStrings(acc, word){
   console.log(acc)
   return acc + " " + word;
 }
 let newarr = arr.reduce(joinStrings, "");
-console.log(newarr) */
+console.log(newarr)
+```
+
+# Map problem
+``` javascript
 const numbermap = {
     1 : "One",
     2 : "two",
@@ -24,9 +30,30 @@ const numbermap = {
   result.forEach((string)=>{
     console.log(string)
   })
+  ```
+
+***
+**Broke down the task in smaller ones for better understanding**
+
+_Seperate the words from string \
+Loop over words array \
+Break word into first letter and rest of the letters, apply uppercase to first letter and join both \
+Join the result into sentence_
+
+``` javascript
+const string = "johnny is a nice kid"
+const arr = string.split(" ")
+     .map((word)=>{
+       return word.charAt(0).toUpperCase() +   
+      word.slice(1)
+     })
+     .join(" ")
+console.log(arr)
+```
+
+  # FizzBuzz Problem
   
-  // FIZZBUZZ
-  
+  ``` javascript
   function fizzBuzz(array){
     array.forEach((number) => {
       if(number%3===0 && number%5===0){
@@ -46,3 +73,4 @@ const numbermap = {
   }
   const numbers= [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 18, 21, 22, 25];
   fizzBuzz(numbers);
+  ```
