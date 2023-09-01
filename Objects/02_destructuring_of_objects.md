@@ -32,3 +32,5 @@ _For this we use object destructuring_
  `Note :-` It is just a syntactical sugar,it is totally upto you to use it or not. 
  
  You can use `(course.courseInstructor)` like that without any issues. 
+***
+[Video Tutorial](https://youtu.be/AViTh83k-IE?si=H-B_GbNlbN7p3uDp)
