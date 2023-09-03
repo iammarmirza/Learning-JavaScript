@@ -29,7 +29,7 @@ for(let i = 0; i<=10; i++){
 ```
 
 ### break and continue
-_We can break the control flow of loop using `break`_
+We can break the control flow of loop using `break`
 
 **`break`**
 
@@ -45,7 +45,7 @@ console.log(`Value of Index is ${index}`)
 
 **`continue`**  
 
-_Works a lil similar to break but it just skip the control flow for one loop and then the whole loop continues as it is._
+Works a lil similar to break but it just skip the control flow for one loop and then the whole loop continues as it is.
 
 ``` javascript
 for(let index = 0; index <=20; index++) {

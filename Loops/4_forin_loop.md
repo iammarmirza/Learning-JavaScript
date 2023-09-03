@@ -1,5 +1,5 @@
 # forin loop
-_We can use `forin` loop for executing the array_
+We can use `forin` loop for executing the array
 ``` javascript
 const myObject = {
     NFS : "Need for Speed",

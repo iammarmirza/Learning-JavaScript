@@ -11,7 +11,7 @@ const newNums = myNums.filter( (num)=> num > 4)
 console.log(newNums) // Expected Output :- [ 5, 6, 7, 8, 9, 10 ]
 ```
 
-_If we want to do the same thing with `forEach` we can do it like
+If we want to do the same thing with `forEach` we can do it like
 
 ``` javascript 
 const newNums = [];

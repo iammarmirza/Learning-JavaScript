@@ -5,13 +5,13 @@
 `MCP` --> Memory Creation Phase\
 `EP` --> Execution Phase
 
-* _Javascript execution context refers to how a piece of code in javascript gets executed_
+* Javascript execution context refers to how a piece of code in javascript gets executed
 
-* _There are mainly 2 contexts_
+* There are mainly 2 contexts
     1. `Global execution context`
     2. `Function execution context`
 
-_There is one more context we will see when we will learn Mongoose, which is_ `EVAL execution context`
+There is one more context we will see when we will learn Mongoose, which is `EVAL execution context`
 
 ***
 `Global execution context`
@@ -20,7 +20,7 @@ _There is one more context we will see when we will learn Mongoose, which is_ `E
 
 `Function Execution Context`
 
-_Function Execution stage has 2 phases_\
+Function Execution stage has 2 phases\
     1. `Memory Creation Phase`  
     2. `Execution Phase`
 

@@ -1,5 +1,5 @@
 # Truthy & Falsy
-_Sometimes Javascript assumes that a value is true then it is called as truthy and vice versa_
+Sometimes Javascript assumes that a value is true then it is called as truthy and vice versa
 
 **Some examples of Falsy Values**
 * false
@@ -11,7 +11,7 @@ _Sometimes Javascript assumes that a value is true then it is called as truthy a
 * undefined
 * NaN
 
-_Apart from these values all are truthy values_
+Apart from these values all are truthy values
 
 **Some truthy values are confusing and their examples are :-**
 * "0" --> If we write 0 in a string then it is a truthy value but if we write it as a number then it is falsy
@@ -22,7 +22,7 @@ _Apart from these values all are truthy values_
 * function(){} --> An empty function declared like this is also a truthy value
 ***
 
-_If we want to find out whether an array is empty we can do it like_
+If we want to find out whether an array is empty we can do it like
 
 ``` javascript
 let myArray = []
@@ -31,7 +31,7 @@ if(myArray.length === 0){
 }
 ```
 
-_If we want to find out whether an object is empty we can do it like_
+If we want to find out whether an object is empty we can do it like
 ``` javascript
 let myObject = {}
 if(Object.keys(myObject).length === 0){ 

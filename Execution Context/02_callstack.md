@@ -1,6 +1,6 @@
 # Call Stack
-_Call stack refers to in which order function gets called.  
-Whenever you call a function it enters a stack in which global execution context is already present at bottom_
+Call stack refers to in which order function gets called.  
+Whenever you call a function it enters a stack in which global execution context is already present at bottom
 * Call stack follows LIFO method --> Last in First out
 // for e.g 
 

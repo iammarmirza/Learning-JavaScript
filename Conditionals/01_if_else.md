@@ -1,5 +1,5 @@
 # If Else
-_`if` and `else` are conditional statements when we want a code to execute differently on two different conditions_
+`if` and `else` are conditional statements when we want a code to execute differently on two different conditions
 
 ``` javascript
 if(condition){
@@ -14,7 +14,7 @@ else{
      // code to be executed
 }
 ```
-_Only one of them will execute_
+Only one of them will execute
 
 * You can also use if `elseif` for more than two conditions
 

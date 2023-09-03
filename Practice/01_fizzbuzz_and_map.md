@@ -35,10 +35,10 @@ const numbermap = {
 ***
 **Broke down the task in smaller ones for better understanding**
 
-_Seperate the words from string \
+Seperate the words from string \
 Loop over words array \
 Break word into first letter and rest of the letters, apply uppercase to first letter and join both \
-Join the result into sentence_
+Join the result into sentence
 
 ``` javascript
 const string = "johnny is a nice kid"

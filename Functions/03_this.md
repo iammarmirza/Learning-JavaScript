@@ -1,7 +1,7 @@
 # This
-`This` _is a keyword in javascript which always refers to the current context or object_
+`This` is a keyword in javascript which always refers to the current context or object
 
-_Since_ `This` _refers to an object you can't use it in function and expect the same output_
+Since `This` refers to an object you can't use it in function and expect the same output
 
 ``` javascript
 const user = {

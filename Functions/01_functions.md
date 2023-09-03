@@ -9,7 +9,7 @@ anyName();
 ```
 * A function will never work unless you call it.
 
-_Now there can be many nestings of functions like you can write functios inside of functions_
+Now there can be many nestings of functions like you can write functios inside of functions
 
 ``` javascript
 function bigSample(){
@@ -25,7 +25,7 @@ function bigSample(){
 bigSample();
 ```
 ***
-_If you are writing a function like this then you can use it in the lines before it is written_
+If you are writing a function like this then you can use it in the lines before it is written
 
 ``` javascript
 console.log(addTwoNumbers(3,5))
@@ -37,7 +37,7 @@ function addTwoNumbers(num1, num2){
 addTwoNumbers();
 ```
 
-_But if you are writing a function and storing it in a variable you will have to use it in the lines below the function is written_
+But if you are writing a function and storing it in a variable you will have to use it in the lines below the function is written
 
 ``` javascript
 const result = function addThreeNumbers(num1, num2, num3){

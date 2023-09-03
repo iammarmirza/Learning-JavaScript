@@ -6,7 +6,7 @@ const course = {
     courseInstructor : "Hitesh Chaudhary"
 }
 ```
-_If we have to use keys in different places to print or something then we will have to use it like_
+If we have to use keys in different places to print or something then we will have to use it like
 ``` javascript
 console.log(course.courseInstructor)  
 ```
@@ -17,11 +17,11 @@ _For this we use object destructuring_
 ``` javascript
  let {courseInstructor} = course;
  ```
- _Now we can just print the same output with_
+ Now we can just print the same output with
  ``` javascript
  console.log(courseInstructor)
  ```
- _Suppose we dont want to write course Instructor, we can also change it to some other word_
+ Suppose we dont want to write course Instructor, we can also change it to some other word
 
  For example
  ``` javascript

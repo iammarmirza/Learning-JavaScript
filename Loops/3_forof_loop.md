@@ -1,5 +1,5 @@
 # For of loop
-_These loops are array specific loops._
+These loops are array specific loops.
 * ["","",""]
 * [{ },{ },{ }]
 

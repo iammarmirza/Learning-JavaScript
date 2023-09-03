@@ -1,9 +1,9 @@
 # IIFE
-**_Immediately invoked function expressions_**
-* _IIFE are often unnamed functions because they are immediately invoked_
-* _When you are writing 2 IIFE's next to each other don't forget to put a semicolon after the first one because IIFE doesn't know where to stop_
+**Immediately invoked function expressions**
+* IIFE are often unnamed functions because they are immediately invoked
+* When you are writing 2 IIFE's next to each other don't forget to put a semicolon after the first one because IIFE doesn't know where to stop
 
-_IIFE are very simple to write_ 
+IIFE are very simple to write
 
 ``` javascript
 (()=>{

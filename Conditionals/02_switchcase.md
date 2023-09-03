@@ -1,5 +1,5 @@
 # Switch Case
-_Switch case is a method when you want to show different outputs at different values_
+Switch case is a method when you want to show different outputs at different values
 
 * Switch cases have one characteristic that if a case is true it will execute all the cases after it 
 * To avoid this we use break so that if one case is true it won't execute the other case codes

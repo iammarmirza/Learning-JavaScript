@@ -1,12 +1,12 @@
 # Objects
-_When you make an object with a constructor it is a singleton object it means it is one of a kind_
+When you make an object with a constructor it is a singleton object it means it is one of a kind
 ``` javascript
 // This is Constructor method and this is how singleton objects are created  
 
 Object.create 
 const user = new Object()
 ```
-_When we declare objects as literals then it is not singleton_
+When we declare objects as literals then it is not singleton
 ``` javascript
 // Normal way of declaring object and it is not singleton 
 
@@ -17,7 +17,7 @@ const JsUser = {
 } 
 ```
 
-_There are 2 ways of accessing an object_
+There are 2 ways of accessing an object
 ``` javascript
 // 1st method
 console.log(JsUser.name)
@@ -25,7 +25,7 @@ console.log(JsUser.name)
 console.log(JsUser["name"]) 
 // When we use the method above, we replace dot with the brackets and we have to write key names in strings 
 ```
-_An Object automatically assumes keys as strings, so as long as we are not specifically defining it as string we can use dot method_
+An Object automatically assumes keys as strings, so as long as we are not specifically defining it as string we can use dot method
 
 ``` javascript
 // But if we define keys as strings like
@@ -52,11 +52,11 @@ const JsUser = {
     email : "ammarmirza@microsoft.com",
 }
 ```
-_Maybe it can show the same output but it won't be used as a symbol, it would show the type string.\
-Correct syntax of using symbol as key in object_\
+Maybe it can show the same output but it won't be used as a symbol, it would show the type string.\
+Correct syntax of using symbol as key in object\
 `[mySym] : "key1"`
 
-_Similarly when we have to use symbol we can only access it through square brackets method and not dot method_
+Similarly when we have to use symbol we can only access it through square brackets method and not dot method
 ***
 ### Overwriting the values of Objects
 ``` javascript
@@ -87,15 +87,15 @@ const obj3 = {obj1, obj2}
 Object.assign(target, source)
 Object.assign(obj1, obj2) 
 ```
-* _In this the obj2 will get merged in obj1_
-* _An empty braces is recommended to use at the start so that the empty object is target and all source get stored there._
+* In this the obj2 will get merged in obj1
+* An empty braces is recommended to use at the start so that the empty object is target and all source get stored there.
 
 ``` javascript 
 // For example
 const obj3 = Object.assign({},obj1,obj2)
 console.log(obj3)
 ```
-_But...but...but... We will mostly use spread operators to merge them like arrays_
+But...but...but... We will mostly use spread operators to merge them like arrays
 
 ``` javascript
 const obj3 = {...obj1, ...obj2}
@@ -112,7 +112,7 @@ console.log(Object.entries(JsUser))
 ```
 ***
 ### hasOwnProperty()
-_Sometimes we have to check that if an object contains a key or not then we can use_ `hasOwnProperty()`
+Sometimes we have to check that if an object contains a key or not then we can use `hasOwnProperty()`
 
 For example
 ``` javascript
