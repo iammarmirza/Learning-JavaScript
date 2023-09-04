@@ -9,7 +9,7 @@
 `*` Multiplication operator\
 `**` Exponentiation operator\
 `++` Increment\
-`--` Decrement\
+`--` Decrement
 
 ## Assignment Operators
 
