@@ -71,5 +71,32 @@ To access individual characters on the basis of index.
 let myString = "Car"
 console.log(myString.charAt(1)) // Expected Output :- a
 ```
+***
+`.trim()`
+
+Removes the whitespace from start and end of the string.
+
+``` javascript
+let myString = "        Hello         "
+console.log(myString.trim()) // Expected Output :- Hello
+```
+***
+`.endsWith()`
+
+The `.endsWith()` method of String values determines whether a string ends with the characters of this string, returning boolean values.
+
+``` javascript
+let myString = "Cats are the best!"
+console.log(myString.endsWith("best!")) // Expected Output :- true
+```
+***
+`.includes()`
+
+The `.includes()` method of String values performs a case-sensitive search to determine whether a given string may be found within this string, returning boolean values.
+
+``` javascript
+let myString = "Dogs are so loyal to their owners"
+console.log(myString.includes("Dogs")) // Expected Output :- true
+```
 
 
