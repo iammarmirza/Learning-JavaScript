@@ -6,7 +6,7 @@
 * Maps works almost similar as an object.
 
 ## Difference between Maps and Objects
-* Objects are ordered whereas Maps are unordered.
+* Objects are unordered whereas Maps are ordered.
 * Keys in Objects can only be a string and a symbol, whereas in Maps it can be of any type.
 * An object is a prototype and may contain a few default keys which may collide with your own keys if you're not careful enough. A map on the other hand does not contain any keys by default.
 * Objects are not iterables whereas Maps are iterables
