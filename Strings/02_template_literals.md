@@ -19,7 +19,7 @@ let sentence = "boy1 is friend of boy2"
 console.log(sentence); // Expected Output :- boy1 is friend of boy2
 ```
 So the question is can we use those strings values?\
-The answer is yes. We can.\
+The answer is yes. We can.
 * This is why template literals are used.
 * We can inject strings using template literals
 * The syntax is very simple, you have to wrap the bigger string in backticks and then wrap the string which we have to inject with `${}`
