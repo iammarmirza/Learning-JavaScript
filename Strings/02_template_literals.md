@@ -23,6 +23,7 @@ The answer is yes. We can.
 * This is why template literals are used.
 * We can inject strings using template literals
 * The syntax is very simple, you have to wrap the bigger string in backticks and then wrap the string which we have to inject with `${}`
+* Injecting strings like this is called `String Interpolation`
 
 ``` javascript
 let boy1 = "Ammar"
