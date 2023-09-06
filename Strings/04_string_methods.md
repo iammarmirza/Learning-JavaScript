@@ -27,6 +27,8 @@ It is a function and it makes all characters Uppercase.
 let myString = "ammar"
 console.log(myString.toUpperCase()); // Expected Output :- AMMAR
 ```
+***
+
 `.slice()`
 
 We can slice strings using slice. 
