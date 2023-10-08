@@ -40,7 +40,7 @@ We can use `.getAttribute()` like this to get access to any attribute of the sel
 document.getElementById("title").getAttribute("id")
 // Expected Output :- title
 
-document.getElementById("title").getAttribute("className")
+document.getElementById("title").getAttribute("class")
 // Expected Output :- first-heading
 ```
 
