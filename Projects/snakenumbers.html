@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Numbers</title>
+    <style>
+        .parent-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .rows{
+            display: flex;
+        }
+        .buttons{
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dice-game{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .active{
+            background-color: yellow;
+        }
+        #dice{
+            background-size: 80px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent-div"></div>
+    <div class="dice-game">
+        <button id="dice" class="buttons">Roll the Dice</button>
+        <span id="dice-count" class="result"></span>
+    </div>
+    <ul>
+        <li>3 to 6</li>
+        <li>12 to 19</li>
+        <li>23 to 27</li>
+        <li>30 to 35</li>
+    </ul>
+</body>
+<script src="myscript.js"></script>
+</html>
