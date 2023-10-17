@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    width: 100px;
+    height: 100px;
+}
+
+.buttons:first-child {
+    background-color: green;
+}
+
+.buttons:nth-child(2) {
+    background-color: blue;
+}
+
+.buttons:nth-child(3) {
+    background-color: yellow;
+}
+
+.buttons:nth-child(4) {
+    background-color: purple;
+}
