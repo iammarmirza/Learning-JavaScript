@@ -1,36 +1,27 @@
 const IMAGE_URL = ["dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.png", "dice6.png"]
 const LADDERS = {
-    4: 14,
-    8: 30,
-    21: 42,
-    28: 56,
-    50 : 67,
-    60 : 80,
-    71 : 92,
-    88 : 99,
+    3 : 7,
+    10 : 14,
+    17 : 22,
+    21 : 26,
+    30 : 35
 }
 
 const SNAKES = {
-    22 : 10,
-    34 : 6,
-    62 : 18,
-    48 : 26,
-    85 : 24,
-    91 : 56,
-    97 : 2
+    8 : 2,
+    16 : 6,
+    23 : 15,
+    28 : 18,
+    33 : 25
 }
 
 const NUMBERS = [
-    [100, 99, 98, 97, 96, 95, 94, 93, 92, 91],
-    [81, 82, 83, 84, 85, 86, 87, 88, 89, 90],
-    [80, 79, 78, 77, 76, 75, 74, 73, 72, 71],
-    [61, 62, 63, 64, 65, 66, 67, 68, 69, 70],
-    [60, 59, 58, 57, 56, 55, 54, 53, 52, 51],
-    [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
-    [40, 39, 38, 37, 36, 35, 34, 33, 32, 31],
-    [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
-    [20, 19, 18, 17, 16, 15, 14, 13, 12, 11],
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    [36, 35, 34, 33, 32, 31],
+    [25, 26, 27, 28, 29, 30],
+    [24, 23, 22, 21, 20, 19],
+    [13, 14, 15, 16, 17, 18],
+    [12, 11, 10, 9, 8, 7],
+    [1, 2, 3, 4, 5, 6]
 ];
 
 function createBoard() {
@@ -68,7 +59,7 @@ function rollDice() {
     const result = document.querySelector('#dice-count')
     const randomNumber = Math.floor(Math.random() * 6) + 1
     result.innerHTML = "You rolled " + randomNumber
-    dice.style.backgroundImage = `url(Images/dice${randomNumber}.png)`
+    dice.style.backgroundImage = `url(Images/${IMAGE_URL[randomNumber - 1]})`
     dice.innerHTML = ""
     const isGameActive = document.querySelector(`.active`)
     if (randomNumber === 6 && !isGameActive) {
@@ -102,13 +93,13 @@ function continueGame(diceValue) {
         newPosition = snakesEnd;
     }
 
-    if (newPosition <= 100) {
+    if (newPosition <= 36) {
         activeBlock.classList.remove('active');
         const newActiveBlock = document.querySelector(`[data-count='${newPosition}']`);
         newActiveBlock.classList.add('active');
     }
 
-    if (newPosition === 100) {
+    if (newPosition === 36) {
         endGame();
     }
 }
