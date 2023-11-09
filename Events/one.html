@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <div>
+        <ul id="list">
+            <li><img width="200px" src="https://images.pexels.com/photos/18824575/pexels-photo-18824575/free-photo-of-a-man-is-standing-in-front-of-a-mountain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"></li>
+            <li><img width="200px" src="https://images.pexels.com/photos/357159/pexels-photo-357159.jpeg?auto=compress&cs=tinysrgb&w=600" id="owl"></li>
+            <li><img width="200px" src="https://images.pexels.com/photos/127016/pexels-photo-127016.jpeg?auto=compress&cs=tinysrgb&w=600" id="bicycle"></li>
+            <li><img width="200px" src="https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="football"></li>
+            <li><a href="https://www.youtube.com/" id="youtube">Youtube</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    const list = document.getElementById('list')
+    const owl = document.getElementById('owl')
+    list.addEventListener('click', function(e){
+        if (e.target.tagName === 'IMG'){
+            const removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    })
+
+    owl.addEventListener('click', function(e){
+        console.log('owl clicked')
+        e.stopPropagation()
+    })
+    
+    document.getElementById('youtube').addEventListener('click', function(e){
+        e.preventDefault()
+    })
+</script>
+</html>
