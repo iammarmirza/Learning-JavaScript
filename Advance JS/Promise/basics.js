@@ -12,12 +12,12 @@
 //     console.log('Operation ended')
 // })
 
-Promise.resolve('foo').then((string)=>{
-    let newPromise = new Promise(function(resolve, reject){
+Promise.resolve('foo').then((string)=>
+        new Promise(function(resolve, reject){
         string += 'baz'
         resolve(string)
     })
-}).then((data)=>{
+).then((data)=>{
     data += 'bear'
     console.log(data)
 })
