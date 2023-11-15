@@ -1,7 +1,6 @@
 const searchBox = document.getElementById('searchbox');
 const cardHolder = document.querySelector('.card-holder')
-let requestUrl;
-let objectArray = [];
+const BASE_URL = 'https://api.jikan.moe/v4/anime';
 
 function makeRequest(url) {
     return new Promise((resolve, reject) => {
@@ -24,34 +23,33 @@ function makeRequest(url) {
 searchBox.addEventListener('keypress', function (e) {
     if (e.key === 'Enter' && searchBox.value !== "") {
         cardHolder.innerHTML = '';
-        requestUrl = `https://api.jikan.moe/v4/anime?q=${searchBox.value}`;
+        requestUrl = `${BASE_URL}?q=${searchBox.value}`;
         makeRequest(requestUrl)
-            .then((data) => {
+            .then((responseObj) => {
                 return new Promise((resolve, reject) => {
-                    objectArray = data.data
-                    resolve(objectArray)
+                    const animes = responseObj.data
+                    const cards = []
+                    for (let i = 0; i < animes.length; i++) {
+                        const { images: { jpg: { image_url } }, title_english, url, title } = animes[i]
+                        const card = document.createElement('div')
+                        card.classList.add('cards');
+                        const cardImage = card.appendChild(document.createElement('img'));
+                        cardImage.classList.add('card-image');
+                        cardImage.setAttribute('src', image_url);
+                        const titleText = card.appendChild(document.createElement('p'));
+                        titleText.classList.add('title');
+                        const animeTitle = title_english || title || "";
+                        if (animeTitle.length < 25) {
+                            titleText.innerText = animeTitle
+                        } else if (animeTitle) {
+                            titleText.innerText = animeTitle.substring(0, 25) + "..."
+                        } else {
+                            titleText.innerText = 'Unknown Title'
+                        }
+                        cards.push(card)
+                    }
+                    cardHolder.append(...cards)
                 })
-            })
-            .then((objects) => {
-                for (let i = 0; i < objects.length; i++) {
-                    const cards = cardHolder.appendChild(document.createElement('div'));
-                    cards.classList.add('cards');
-                    const cardImage = cards.appendChild(document.createElement('img'));
-                    cardImage.classList.add('card-image');
-                    cardImage.setAttribute('src', `${objects[i].images.jpg.image_url}`);
-                    const title = cards.appendChild(document.createElement('p'));
-                    title.classList.add('title');
-                    const animeTitle = String(objects[i].title_english);
-                    if(animeTitle.length < 25){
-                        title.innerHTML = animeTitle
-                    }
-                    if(animeTitle.length > 25){
-                        title.innerHTML = animeTitle.substring(0, 25) + "..."
-                    }
-                    if (animeTitle === "null"){
-                        title.innerHTML = 'N/A'
-                    }
-                }
             }).catch(() => {
                 alert('Some Error has occurred');
             });
