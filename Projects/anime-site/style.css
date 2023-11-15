@@ -47,3 +47,17 @@ body{
     text-align: center;
     margin-top: 8px;
 }
+
+.searchbox-holder {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#search-button {
+    background-color: greenyellow;
+    color: black;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 0px 16px;
+}
