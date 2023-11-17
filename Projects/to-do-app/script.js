@@ -1,16 +1,16 @@
 const inputBox = document.querySelector('.input-task')
 const addButton = document.querySelector('.add-button')
-const mainContainer = document.querySelector('.main-container')
+const listContainer = document.querySelector('.lists-container')
 
-function createListContainer(text) {
-    const listContainer = mainContainer.appendChild(document.createElement('div'))
-    listContainer.classList.add('list-container')
+function createListItem(text) {
+    const listItem = document.createElement('div')
+    listItem.classList.add('list-item')
 
-    const listText = listContainer.appendChild(document.createElement('p'))
+    const listText = document.createElement('p')
     listText.classList.add('list-text')
     listText.innerText = text
 
-    const deleteButton = listContainer.appendChild(document.createElement('button'))
+    const deleteButton = document.createElement('button')
     deleteButton.classList.add('delete-button')
     deleteButton.innerText = 'Delete'
 
@@ -19,13 +19,16 @@ function createListContainer(text) {
     })
 
     deleteButton.addEventListener('click', function () {
-        removeListContainer(listContainer)
+        removeListItem(listItem)
     })
+
+    listContainer.append(listItem)
+    listItem.append(listText, deleteButton)
 }
 
 function addListItem() {
     if (inputBox.value !== '') {
-        createListContainer(inputBox.value);
+        createListItem(inputBox.value);
         inputBox.value = '';
     }
 }
@@ -34,7 +37,7 @@ function toggleStrike(element) {
     element.classList.toggle('strike')
 }
 
-function removeListContainer(container) {
+function removeListItem(container) {
     container.remove()
 }
 

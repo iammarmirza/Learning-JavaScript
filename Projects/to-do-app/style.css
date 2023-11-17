@@ -2,7 +2,7 @@ body {
     background-color: #22092C;
 }
 
-.main-container {
+.lists-container {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -45,7 +45,7 @@ body {
     border-radius: 8px;
 }
 
-.list-container {
+.list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +75,7 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .main-container {
+    .lists-container {
         padding: 40px 60px;
         gap: 30px;
     }
@@ -107,7 +107,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .main-container {
+    .lists-container {
         padding: 40px 60px;
         gap: 30px;
     }
