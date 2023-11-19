@@ -7,11 +7,14 @@ const card = document.querySelector('body').appendChild(document.createElement('
 card.classList.add('card')
 
 const requestUrl = "https://api.github.com/users/syedkumailraza1"
-const xhr = new XMLHttpRequest()
-xhr.open('GET', requestUrl)
-xhr.onreadystatechange = function () {
-    if (this.readyState === 4) {
-        const data = JSON.parse(this.responseText);
+async function fetchData() {
+    try {
+        const response = await fetch(requestUrl)
+        if (!response.ok) {
+            throw new Error(`HTTP Error! Status : ${response.status}`)
+        }
+
+        const data = await response.json();
         moreDetailsObject.location = data.location;
         moreDetailsObject.twitter = data.twitter_username;
         moreDetailsObject.followers = data.followers;
@@ -38,17 +41,22 @@ xhr.onreadystatechange = function () {
         for (let i = 0; i < MOREDETAILSARR.length; i++) {
             const moreDetails = cardDetails.appendChild(document.createElement('div'))
             moreDetails.classList.add('more-details')
-            if(i === 0){
+            if (i === 0) {
                 moreDetails.innerHTML = MOREDETAILSARR[i] + moreDetailsObject.location
             }
-            if(i === 1){
+            if (i === 1) {
                 moreDetails.innerHTML = MOREDETAILSARR[i] + moreDetailsObject.twitter
             }
-            if(i === 2){
+            if (i === 2) {
                 moreDetails.innerHTML = MOREDETAILSARR[i] + moreDetailsObject.followers
             }
         }
     }
+    catch (error) {
+        alert('Error fetching data:', error);
+    }
+
 }
-xhr.send()
+
+fetchData()
 
